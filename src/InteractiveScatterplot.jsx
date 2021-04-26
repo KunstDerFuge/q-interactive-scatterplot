@@ -31,10 +31,12 @@ class InteractiveScatterplot extends React.Component {
       height = 500 - margin.top - margin.bottom
 
     d3.select('g').remove()
+    d3.select('#chart').remove()
 
     const svg = d3
       .select('#area')
       .append('svg')
+      .attr('id', 'chart')
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
       .append('g')
