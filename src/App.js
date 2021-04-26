@@ -25,6 +25,7 @@ function App() {
       <Modal
         open={selectedDatum !== null}
         onClose={() => setSelectedDatum(null)}
+        onClick={() => setSelectedDatum(null)}
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
         style={{justifyContent: 'center', alignItems: 'center', display: 'flex'}}
