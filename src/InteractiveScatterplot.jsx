@@ -84,7 +84,6 @@ class InteractiveScatterplot extends React.Component {
       .attr('x', 0 - (height / 2))
       .attr('dy', '1em')
       .style('text-anchor', 'middle')
-      .style('font-size', '0.7em')
       .text('Time Diff (Hours)')
 
 
