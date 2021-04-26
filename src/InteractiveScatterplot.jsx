@@ -66,10 +66,14 @@ class InteractiveScatterplot extends React.Component {
 
     // Draw y axis
     const y = d3.scaleLinear().domain([-9, 9]).range([height, 0])
+    const y_axis = d3.axisLeft().scale(y).tickValues([-8, -7, 8])
+    .tickFormat(function(utc_offset) {
+        return utc_offset > 0 ? '+' + utc_offset : '−' + -1 * utc_offset
+    })
     svg
       .append('g')
       .style('color', 'white')
-      .call(d3.axisLeft(y))
+      .call(y_axis)
       .selectAll('text')
       .style('color', 'black')
 
@@ -95,7 +99,8 @@ class InteractiveScatterplot extends React.Component {
 
     // Draw grid lines
     const xAxisGrid = d3.axisBottom(x).tickSize(-height).tickFormat('').ticks(10)
-    const yAxisGrid = d3.axisLeft(y).tickSize(-width).tickFormat('').ticks(10)
+    const yAxisGrid = d3.axisLeft(y).tickSize(-width).tickFormat('')
+    .tickValues([-8, -7, 8])
 
     svg.append('g')
       .attr('class', 'x axis-grid')
