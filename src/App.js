@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div style={{height: isMobile ? 1000 : 500, width: isMobile ? 600 : 1250, padding: '10px'}}>
+    <div align="center" style={{paddingBottom: isMobile ? 2 : 10 + "px"}}>Image create date vs. Drop timestamps: Hour difference</div>
       <Grid container direction={'row-reverse'}>
         <Grid item container md={12} lg={6}>
           <InteractiveScatterplot data={data} selectedDatum={selectedDatum} setSelectedDatum={setSelectedDatum}
