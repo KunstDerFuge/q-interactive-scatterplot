@@ -165,7 +165,7 @@ class InteractiveScatterplot extends React.Component {
   render() {
     return (
 
-      <div style={{height: '100%'}}>
+      <div style={{height: '100%', paddingBottom: '10px'}}>
         <svg id="area" height={500} width={600} />
       </div>
     )
