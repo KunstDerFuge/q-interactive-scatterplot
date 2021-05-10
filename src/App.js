@@ -9,8 +9,14 @@ function App() {
   const [selectedDatum, setSelectedDatum] = React.useState(null)
 
   const isMobile = !useMediaQuery('(min-width:1280px)')
+  const smallScreen = !useMediaQuery('(min-width:650px)')
 
   return (
+  <>
+  {
+    smallScreen ?
+    <img style={{maxWidth: '95%'}} src={'/images/static.png'} />
+    :
     <div style={{height: isMobile ? 1000 : 500, width: isMobile ? 600 : 1250, padding: '10px'}}>
     <div align="center" style={{paddingBottom: isMobile ? 2 : 10 + "px"}}>Image create date vs. Drop timestamps: Hour difference</div>
       <Grid container direction={'row-reverse'}>
@@ -37,6 +43,8 @@ function App() {
         }
       </Modal>
     </div>
+    }
+    </>
   )
 }
 
