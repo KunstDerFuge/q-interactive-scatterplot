@@ -1,3 +1,9 @@
+# Interactive Q Metadata Visualization
+
+This is a React-d3 data visualization that was featured in [an article I contributed to](https://www.bellingcat.com/news/rest-of-world/2021/05/10/where-in-the-world-is-q-clues-from-image-metadata/) on Bellingcat. Installation instructions for this CRA-bootstrapped project can be found below.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
